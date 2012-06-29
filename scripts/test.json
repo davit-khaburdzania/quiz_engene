@@ -1,0 +1,94 @@
+{
+	"name"      : "JsTest",
+	"level"     :	"Advance",
+	"questions" : [
+						{
+							"bug"    : "what is output: <br> <code> +\"22\" + 1 - !null </code>",
+							"a"		 : "undefined",
+							"b" 	 : "23",
+							"c" 	 : "Error",
+							"d" 	 : "22",
+							"answer" : "d"
+						},
+						{
+							"bug"    : "what is the difference between new String() AND String()",
+							"a"		 : "new String() creats string literal. new String() creats String Object ",
+							"b" 	 : "there is no difference they produce same value",
+							"c" 	 : "new String() creats String Object. String() creats string literal",
+							"d" 	 : "there is no String() function in javascript",
+							"answer" : "c"
+						},
+						{
+							"bug"    : "what is output: <br> <code> \"\" * null </code>",
+							"a"		 : "false",
+							"b" 	 : "null",
+							"c" 	 : "0",
+							"d" 	 : "Error",
+							"answer" : "c"
+						},
+						{
+							"bug"    : "what is output: <br> <code>  3 * [4] </code>",
+							"a"		 : "12",
+							"b" 	 : "[4][4][4][4]",
+							"c" 	 : "Error",
+							"d" 	 : "34",
+							"answer" : "a"
+						},
+						{
+							"bug"    : "what is output: <br> <code>  !!22 - \"1\" </code>",
+							"a"		 : "0",
+							"b" 	 : "21",
+							"c" 	 : "false",
+							"d" 	 : "Error",
+							"answer" : "a"
+						},
+						{
+							"bug"    : "what is output: <br> <code> var x={len : 22}; <br> x.toString=function(){return new Date();} <br> x+\"b\"; </code>",
+							"a"		 : "current time in seconds + \"b\" ",
+							"b" 	 : "Error",
+							"c" 	 : "\"b\"",
+							"d" 	 : "NaN",
+							"answer" : "b"
+						},
+						{
+							"bug"    : "what is output: <br> <code> var x=3; <br> x=x++; <br> x;</code>",
+							"a"		 : "4",
+							"b" 	 : "Error",
+							"c" 	 : "3",
+							"d" 	 : "5",
+							"answer" : "c"
+						},
+						{
+							"bug"    : "what is output: <br> <code> parseInt(022) </code>",
+							"a"		 : "Error",
+							"b" 	 : "18",
+							"c" 	 : "22",
+							"d" 	 : "output is unpredictable",
+							"answer" : "d"
+						},
+						{
+							"bug"    : "what is output: <br><code> null + undefined</code>",
+							"a"		 : "NaN",
+							"b" 	 : "null",
+							"c" 	 : "undefined",
+							"d" 	 : "0",
+							"answer" : "a"
+						},
+						{
+							"bug"    : "what is output: <br><code> {x:22} + 3</code>",
+							"a"		 : "25",
+							"b" 	 : "223",
+							"c" 	 : "3",
+							"d" 	 : "NaN",
+							"answer" : "c"
+						},
+						{
+							"bug"    : "what is output: <br><code> (true + +\"10\" - 20)%\"3\" </code>",
+							"a"		 : "1",
+							"b" 	 : "NaN",
+							"c" 	 : "Error",
+							"d" 	 : "-2",
+							"answer" : "d"
+						}
+				  ]
+}

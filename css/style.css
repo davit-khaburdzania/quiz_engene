@@ -1,0 +1,82 @@
+body{
+	background-color: #FFF;
+}
+
+#test_wrapper{
+	width: 700px;
+	height: 529px;
+	margin: 70px auto;
+	background-color: #FFC;
+	-webkit-box-shadow: 1px 1px 16px #525050;
+	-moz-box-shadow: 1px 1px 16px #525050;
+	box-shadow: 1px 1px 16px #525050;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#bug{
+	width: 700px;
+	height: 150px;
+	background-color: #C4B2B8;
+	border-radius: 2px 2px 0 0;
+}
+
+#bug p{
+	padding: 15px 30px;
+	padding-top: 1%;
+	line-height: 166%;
+	font-size: 21px;
+	font-family: 'Karla', sans-serif;
+	font-style: italic;
+	color: #000;
+	opacity: 0.8;
+}
+
+#answers{
+	width: 700px;
+	height: 280px;
+}
+
+#answers ul{
+	margin-top: 0px;
+	list-style: none;
+	padding-left: 30px;
+	padding-top: 10px;
+
+}
+
+#answers ul li{
+	background-color: #C9C9C9;
+	margin-top: 7px;
+	padding: 15px;
+	font-family: 'Overlock', cursive;
+	color: #0E0E0E;
+	font-size: 19px;
+}
+
+#next{
+	font-size: 37px;
+	width: 250px;
+	height: 50px;
+	background-color: #C4B2B8;
+	text-align: center;
+	line-height: 45px;
+	font-family: 'Overlock', cursive;
+}
+
+#left{
+	font-size: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 10px;
+	text-align: right;
+	font-family: 'Overlock', cursive
+}
+
+#status_bar{
+	width: 700px;
+	height: 9px;
+	background-color: #C4B2B8;
+}
