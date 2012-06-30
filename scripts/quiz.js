@@ -9,7 +9,7 @@ var a, b, c, d;
 var test_url = "scripts/test.json";
 var ind = 0;
 var q_length;
-
+var user_answers;
 
 window.onload = function() {
 	load_test(test_url, init);
@@ -41,6 +41,7 @@ function load_test(test_url, callback){
 		questions = test.questions;
 		question = shuffle(questions);
 		q_length = questions.length;
+		user_answers = Array(q_length+1);
 		callback();
 	});
 	
@@ -56,7 +57,7 @@ function set_question(q){
 
 function set_status_bar(ind){
 	answered.innerHTML = ind + "/" + q_length;
-	 $("#status_bar").animate({"width": (Math.round( 700/q_length * ind ) + "px")}, 800);
+	 $("#status_bar").animate({"width": (Math.round( 700/q_length * ind ) + "px")}, 600);
 }
 
 function shuffle(o){
@@ -65,8 +66,9 @@ function shuffle(o){
 }
 
 function next_clicked(event){
+	remove_clicked(null);
 	if(ind >= questions.length) {
-		alert("its all thank u !");
+		sum_up();
 		return;
 	}
 	set_question(questions[ind]);
@@ -75,7 +77,45 @@ function next_clicked(event){
 }
 
 function answer_clicked(event){
-	 var current_answer = event.srcElement.getAttribute("id")
-	 if(question[ind-1].answer == current_answer)
-	 	alert("your are right");
+	 var current_answer = event.target.getAttribute("id") || event.srcElement.getAttribute("id");
+	 if(current_answer == null || current_answer == "answers") return;
+
+	 $("#" + current_answer).addClass("clicked");
+	 remove_clicked(current_answer);
+	 user_answers[ind] = current_answer;
+	
+}
+
+function remove_clicked(current_answer){
+	 var word = "abcd";
+	 for(var i = 0; i < 4; i++) {
+	 	if(word.charAt(i) == current_answer)
+	 		continue;
+	 	$("#" + word.charAt(i)).removeClass("clicked");
+	 }
+}
+
+function sum_up(){
+	var correc_answers = 0;
+	$("#next").hide();
+	$("#left").hide();
+	$("#status_bar").hide();
+	
+	bug.innerHTML = "Test: " + test.name + "<br>";
+	bug.innerHTML += "Level: " + test.level + "<br>";
+	bug.innerHTML += "Author: " + test.author;
+	answers.innerHTML = "";
+
+	for(var i = 1; i <= q_length; i++) {
+		if(user_answers[i] == questions[i-1].answer)
+			correc_answers++;
+		else
+			console.log( questions[i-1].bug );
+	}
+	var percent = (correc_answers/q_length) * 100;
+	percent = percent >>> 0;
+
+	answers.innerHTML += "<br><p>you scored " + percent + "%" + "</p>" + "<p>" + 
+						(q_length - correc_answers) + " wrong answers </p>";
+
 }

@@ -76,7 +76,20 @@ body{
 }
 
 #status_bar{
-	width: 700px;
+	width: 0px;
 	height: 9px;
 	background-color: #C4B2B8;
+}
+
+.clicked{
+	background-color: #D69191 !important; 
+}
+
+#answers p{
+	font-size: 29px;
+	font-family: 'Karla', sans-serif;
+	padding-left: 1px;
+	line-height: 16px;
+	text-align: center;
+	font-style: italic;
 }

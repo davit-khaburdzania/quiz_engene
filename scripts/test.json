@@ -1,6 +1,7 @@
 {
 	"name"      : "JsTest",
-	"level"     :	"Advance",
+	"level"     :  "Advance",
+	"author"    :  "Davit Khaburdzania",
 	"questions" : [
 						{
 							"bug"    : "what is output: <br> <code> +\"22\" + 1 - !null </code>",
@@ -12,7 +13,7 @@
 						},
 						{
 							"bug"    : "what is the difference between new String() AND String()",
-							"a"		 : "new String() creats string literal. new String() creats String Object ",
+							"a"		 : "new String() creats string literal. String() creats String Object ",
 							"b" 	 : "there is no difference they produce same value",
 							"c" 	 : "new String() creats String Object. String() creats string literal",
 							"d" 	 : "there is no String() function in javascript",
@@ -63,8 +64,8 @@
 							"a"		 : "Error",
 							"b" 	 : "18",
 							"c" 	 : "22",
-							"d" 	 : "output is unpredictable",
-							"answer" : "d"
+							"d" 	 : "0",
+							"answer" : "b"
 						},
 						{
 							"bug"    : "what is output: <br><code> null + undefined</code>",
@@ -84,10 +85,10 @@
 						},
 						{
 							"bug"    : "what is output: <br><code> (true + +\"10\" - 20)%\"3\" </code>",
-							"a"		 : "1",
+							"a"		 : "-0",
 							"b" 	 : "NaN",
 							"c" 	 : "Error",
-							"d" 	 : "-2",
+							"d" 	 : "0",
 							"answer" : "d"
 						}
 				  ]
